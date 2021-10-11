@@ -15,6 +15,10 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatInputModule} from "@angular/material/input";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AppInterceptor} from "./shared/interceptor/app.interceptor";
+import { StudentDashboardComponent } from './student/student-dashboard/student-dashboard/student-dashboard.component';
+import {StudentModule} from "./student/student.module";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatTableModule} from "@angular/material/table";
 
 const appRoutes: Routes =
   [
@@ -25,27 +29,34 @@ const appRoutes: Routes =
     {
       path: 'teacher',
       component: TeacherDashboardComponent
+    },
+    {
+      path: 'student',
+      component: StudentDashboardComponent
     }
   ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginSignupComponent
+    LoginSignupComponent,
   ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        TeacherModule,
-        RouterModule.forRoot(appRoutes),
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatButtonModule,
-        MatFormFieldModule,
-        MatInputModule,
-        HttpClientModule
-    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    TeacherModule,
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HttpClientModule,
+    StudentModule,
+    MatMenuModule,
+    MatTableModule
+  ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: AppInterceptor,
