@@ -3,22 +3,32 @@
     <span>Study App</span>
   </mat-toolbar>
   <mat-toolbar color="primary">
+
     <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon">
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
+
       <button mat-menu-item>
         <mat-icon>home</mat-icon>
         <span><a routerLink="/" routerLinkActive="active">Home</a></span>
       </button>
+
+      <button mat-menu-item>
+      <mat-icon>assignment_ind</mat-icon>
+      <span><a routerLink="/login" routerLinkActive="active">Login</a></span>
+    </button>
+
       <button mat-menu-item>
         <mat-icon>group_add</mat-icon>
-        <span><a routerLink="/login-signup" routerLinkActive="active">Login-Signup</a></span>
+        <span><a routerLink="/signup" routerLinkActive="active">Signup</a></span>
       </button>
+
       <button mat-menu-item>
         <mat-icon>account_box</mat-icon>
         <span><a routerLink="/teacher" routerLinkActive="active">Teacher</a></span>
       </button>
+
       <button mat-menu-item>
         <mat-icon>account_circle</mat-icon>
         <span><a routerLink="/student" routerLinkActive="active">Student</a></span>

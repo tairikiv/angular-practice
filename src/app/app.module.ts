@@ -19,12 +19,18 @@ import { StudentDashboardComponent } from './student/student-dashboard/student-d
 import {StudentModule} from "./student/student.module";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatTableModule} from "@angular/material/table";
+import { LoginComponent } from './signup-login/login/login.component';
+import { SignupComponent } from './signup-login/signup/signup.component';
 
 const appRoutes: Routes =
   [
     {
-      path: 'login-signup',
-      component: LoginSignupComponent
+      path: 'login',
+      component: LoginComponent
+    },
+    {
+      path: 'signup',
+      component: SignupComponent
     },
     {
       path: 'teacher',
@@ -40,6 +46,8 @@ const appRoutes: Routes =
   declarations: [
     AppComponent,
     LoginSignupComponent,
+    LoginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
