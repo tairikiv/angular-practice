@@ -1,19 +1,27 @@
-export class Teacher{
-  id: String;
-  teacherId: String;
-  name: String;
+import {City} from "./City";
+
+export class Teacher {
+  id: number;
+  firstName: String;
+  lastName: String;
+  age: number;
+  city: City;
+  school: String;
+  specialization: String;
   joinDate: Date;
   isActive: boolean;
-  school: String;
-  specialistFields: String[];
 
-  constructor(id: String, teacherId: String, name: String, joinDate: Date, isActive: boolean, school: String, specialistFields: String[]) {
+
+  constructor(id: number, firstName: String, lastName: String, age: number, city: City, school: String, specialization: String, joinDate: Date, isActive: boolean) {
     this.id = id;
-    this.teacherId = teacherId;
-    this.name = name;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.city = city;
+    this.school = school;
+    this.specialization = specialization;
     this.joinDate = joinDate;
     this.isActive = isActive;
-    this.school = school;
-    this.specialistFields = specialistFields;
   }
 }
+

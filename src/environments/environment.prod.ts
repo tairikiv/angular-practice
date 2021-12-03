@@ -3,5 +3,5 @@ export const environment = {
   production: true,
   development: false,
   environmentName: 'PROD',
-  baseURL: 'http://5d7e077fd756030014184069.mockapi.io/'
+  baseURL: 'http://localhost:8070/'
 };

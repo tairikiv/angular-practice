@@ -9,7 +9,7 @@ import {Teacher} from "../../shared/model/Teacher";
 })
 export class TeacherDashboardComponent implements OnInit {
   teachers: Teacher[] = [];
-  displayedColumns: string[] = ['id', 'teacherId', 'name', 'joinDate', 'school', 'specialistFields', 'isActive'];
+  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'age', 'city', 'school', 'specialization','joinDate', 'isActive'];
 
   constructor(private teacherService: TeacherService) { }
 
